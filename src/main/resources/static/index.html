@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Loja de Carros</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>Loja de Carros</h1>
+
+<section id="carros">
+    <h2>Carros</h2>
+
+    <h3>Cadastrar / Atualizar carro</h3>
+
+    <form id="formCarro">
+        <input type="hidden" id="carroId">
+
+        <label for="modelo">Modelo:</label>
+        <input
+                type="text"
+                id="modelo"
+                maxlength="9"
+                required
+        >
+
+        <label for="ano">Ano:</label>
+        <input
+                type="number"
+                id="ano"
+                required
+        >
+
+        <label for="preco">Preço:</label>
+        <input
+                type="number"
+                id="preco"
+                step="0.01"
+                required
+        >
+
+        <button type="submit">Salvar carro</button>
+
+        <button type="button" id="cancelarEdicao">
+            Cancelar
+        </button>
+    </form>
+
+    <h3>Consulta</h3>
+
+    <button type="button" onclick="consultarCarro()">
+        Consultar carro por ID
+    </button>
+
+    <h3>Carros cadastrados</h3>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Modelo</th>
+            <th>Ano</th>
+            <th>Preço</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+
+        <tbody id="tabelaCarros">
+        </tbody>
+    </table>
+</section>
+
+
+<section id="pessoas">
+    <h2>Pessoas</h2>
+
+    <h3>Cadastrar / Atualizar pessoa</h3>
+
+    <form id="formPessoa">
+        <input type="hidden" id="pessoaId">
+
+        <label for="nome">Nome:</label>
+        <input
+                type="text"
+                id="nome"
+                required
+        >
+
+        <button type="submit">Salvar pessoa</button>
+
+        <button type="button" id="cancelarEdicaoPessoa">
+            Cancelar
+        </button>
+    </form>
+
+    <h3>Consulta</h3>
+
+    <button type="button" onclick="consultarPessoa()">
+        Consultar pessoa por ID
+    </button>
+
+    <h3>Pessoas cadastradas</h3>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+
+        <tbody id="tabelaPessoas">
+        </tbody>
+    </table>
+</section>
+<section id="usuarios">
+    <h2>Usuários</h2>
+
+    <h3>Cadastrar / Atualizar usuário</h3>
+
+    <form id="formUsuario">
+        <input type="hidden" id="usuarioId">
+
+        <label for="nomeUsuario">Nome:</label>
+        <input
+                type="text"
+                id="nomeUsuario"
+                required
+        >
+
+        <button type="submit">Salvar usuário</button>
+
+        <button type="button" id="cancelarEdicaoUsuario">
+            Cancelar
+        </button>
+    </form>
+
+    <h3>Consulta</h3>
+
+    <button type="button" onclick="consultarUsuario()">
+        Consultar usuário por ID
+    </button>
+
+    <h3>Usuários cadastrados</h3>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+
+        <tbody id="tabelaUsuarios">
+        </tbody>
+    </table>
+</section>
+<section id="logs">
+    <h2>LOGs do sistema</h2>
+
+    <h3>Consulta</h3>
+
+    <button type="button" onclick="consultarLog()">
+        Consultar LOG por ID
+    </button>
+
+    <h3>LOGs registrados</h3>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ação</th>
+            <th>Descrição</th>
+            <th>Data e Hora</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+
+        <tbody id="tabelaLogs">
+        </tbody>
+    </table>
+</section>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
